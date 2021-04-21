@@ -2,7 +2,7 @@ package section001_classes;
 
 public class Solution {
     public static void main(String[] args) {
-        int[] array = {1, -2, 3, 4, -5};
+        int[] array = {1, -2, 3, 4, -5, 8, 9, 5, 6, 34};
 
         DynaArray result = getPositiveNumbers(array);
 
@@ -13,16 +13,21 @@ public class Solution {
     }
 
     private static DynaArray getPositiveNumbers(int[] array) {
-        int[] result = new int[array.length];
-        int count = 0;
+        DynaArray dynaArray = new DynaArray();
         for (int value : array) {
             if (value > 0) {
-                result[count++] = value;
+                add(dynaArray, value);
             }
         }
-        DynaArray dynaArray = new DynaArray();
-        dynaArray.result = result;
-        dynaArray.count = count;
         return dynaArray;
+    }
+
+    private static void add(DynaArray dynaArray, int value) {
+        if (dynaArray.count == dynaArray.result.length) {
+            int[] newArray = new int[dynaArray.result.length * 2];
+            System.arraycopy(dynaArray.result, 0, newArray, 0, dynaArray.result.length);
+            dynaArray.result = newArray;
+        }
+        dynaArray.result[dynaArray.count++] = value;
     }
 }
