@@ -16,18 +16,10 @@ public class Solution {
         DynaArray dynaArray = new DynaArray();
         for (int value : array) {
             if (value > 0) {
-                add(dynaArray, value);
+                //DynaArray.add(dynaArray, value);
+                dynaArray.add(value);
             }
         }
         return dynaArray;
-    }
-
-    private static void add(DynaArray dynaArray, int value) {
-        if (dynaArray.count == dynaArray.result.length) {
-            int[] newArray = new int[dynaArray.result.length * 2];
-            System.arraycopy(dynaArray.result, 0, newArray, 0, dynaArray.result.length);
-            dynaArray.result = newArray;
-        }
-        dynaArray.result[dynaArray.count++] = value;
     }
 }
