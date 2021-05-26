@@ -9,5 +9,7 @@ public class FullClassNameTest {
         //section001_classes.DynaArray dynaArray2 = new section001_classes.DynaArray();
 
         Class1 class1 = new Class1();
+        section001_classes.package1.Class1 class2 = new section001_classes.package1.Class1();
+
     }
 }
