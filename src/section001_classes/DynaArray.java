@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class DynaArray {
 
-    int[] result = new int[5];
+    private int[] result = new int[5];
 
-    int count;
+    private int count;
 
     void add(int value) {
         if (count == result.length) {

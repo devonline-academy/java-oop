@@ -6,10 +6,7 @@ public class Solution {
 
         DynaArray result = getPositiveNumbers(array);
 
-        for (int i = 0; i < result.count; i++) {
-            System.out.print(result.result[i] + " ");
-        }
-        System.out.println();
+        System.out.println(result.asString());
     }
 
     private static DynaArray getPositiveNumbers(int[] array) {
