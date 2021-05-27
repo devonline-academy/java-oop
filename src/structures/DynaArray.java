@@ -17,6 +17,18 @@ public class DynaArray {
         result[count++] = value;
     }
 
+    public void add(int[] array) {
+        for (int value : array) {
+            add(value);
+        }
+    }
+
+    public void add(DynaArray dynaArray) {
+        for (int i = 0; i < dynaArray.count; i++) {
+            add(dynaArray.result[i]);
+        }
+    }
+
     public int[] toArray() {
         return Arrays.copyOf(result, count);
     }
