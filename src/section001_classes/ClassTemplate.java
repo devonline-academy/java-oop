@@ -3,15 +3,18 @@ package section001_classes;
 public class ClassTemplate {
 
     // --------- Fields: ---------
-    // ${type} ${name};
-    int fieldName;
+    // ${modifier} ${type} ${name};
+    // where ${modifier} is from set: [private, default/package, protected, public]
+    private int fieldName;
 
     // ...
 
 
     // --------- Methods: ---------
-    // ${return-type} ${name} (${param-list}), where param-list item is ${param-type} ${param-name}, separated by comma
-    void methodName(int param1Name, boolean param2Name, String param3Name /* ... */) {
+    // ${modifier} ${return-type} ${name} (${param-list}),
+    // where param-list item is ${param-type} ${param-name}, separated by comma and
+    // ${modifier} is from set: [private, default/package, protected, public]
+    public void methodName(int param1Name, boolean param2Name, String param3Name /* ... */) {
         // method body
     }
 
