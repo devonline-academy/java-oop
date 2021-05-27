@@ -18,15 +18,21 @@ public class DynaArray {
     }
 
     public void add(int[] array) {
-        for (int value : array) {
-            add(value);
-        }
+        add(array, array.length);
     }
 
     public void add(DynaArray dynaArray) {
-        for (int i = 0; i < dynaArray.count; i++) {
-            add(dynaArray.result[i]);
+        add(dynaArray.result, dynaArray.count);
+    }
+
+    private void add(int[] array, int length) {
+        if (result.length - count < length) {
+            int[] newArray = new int[count + length];
+            System.arraycopy(result, 0, newArray, 0, result.length);
+            result = newArray;
         }
+        System.arraycopy(array, 0, result, count, length);
+        count += length;
     }
 
     public int[] toArray() {
