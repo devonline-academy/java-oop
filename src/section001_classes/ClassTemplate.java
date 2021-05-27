@@ -1,5 +1,7 @@
 package section001_classes;
 
+// ${modifier} class ${name}
+// where ${modifier} is from set: [default/package, public]
 public class ClassTemplate {
 
     // --------- Fields: ---------
