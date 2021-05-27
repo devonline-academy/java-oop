@@ -1,5 +1,7 @@
 package section001_classes;
 
+import structures.DynaArray;
+
 import java.util.Arrays;
 
 //import java.lang.String;

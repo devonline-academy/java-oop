@@ -1,5 +1,7 @@
 package section001_classes;
 
+import structures.DynaArray;
+
 public class DynaArrayTest {
     public static void main(String[] args) {
         DynaArray dynaArray = new DynaArray();

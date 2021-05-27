@@ -1,4 +1,4 @@
-package section001_classes;
+package structures;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ public class DynaArray {
 
     private int count;
 
-    void add(int value) {
+    public void add(int value) {
         if (count == result.length) {
             int[] newArray = new int[result.length * 2];
             System.arraycopy(result, 0, newArray, 0, result.length);
@@ -17,11 +17,11 @@ public class DynaArray {
         result[count++] = value;
     }
 
-    int[] toArray() {
+    public int[] toArray() {
         return Arrays.copyOf(result, count);
     }
 
-    String asString() {
+    public String asString() {
         final StringBuilder stringBuilder = new StringBuilder().append('[');
         for (int i = 0; i < count; i++) {
             stringBuilder.append(result[i]);

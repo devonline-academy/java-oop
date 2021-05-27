@@ -1,5 +1,7 @@
 package section001_classes;
 
+import structures.DynaArray;
+
 /**
  * boolean aBoolean = false;
  * byte aByte = 0;

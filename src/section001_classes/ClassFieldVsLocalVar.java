@@ -1,5 +1,7 @@
 package section001_classes;
 
+import structures.DynaArray;
+
 public class ClassFieldVsLocalVar {
     boolean aBoolean;
     byte aByte;
