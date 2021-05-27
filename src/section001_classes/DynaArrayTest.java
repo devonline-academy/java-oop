@@ -11,6 +11,8 @@ public class DynaArrayTest {
         dynaArray.add(4);
         dynaArray.add(5);
 
+        //dynaArray.count = 20;
+
         System.out.println(dynaArray.asString());
     }
 }
