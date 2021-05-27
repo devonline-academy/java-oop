@@ -10,9 +10,7 @@ public class DynaArray {
 
     public void add(int value) {
         if (count == result.length) {
-            int[] newArray = new int[result.length * 2];
-            System.arraycopy(result, 0, newArray, 0, result.length);
-            result = newArray;
+            grow(result.length * 2);
         }
         result[count++] = value;
     }
@@ -27,12 +25,16 @@ public class DynaArray {
 
     private void add(int[] array, int length) {
         if (result.length - count < length) {
-            int[] newArray = new int[count + length];
-            System.arraycopy(result, 0, newArray, 0, result.length);
-            result = newArray;
+            grow(count + length);
         }
         System.arraycopy(array, 0, result, count, length);
         count += length;
+    }
+
+    private void grow(int newLength) {
+        int[] newArray = new int[newLength];
+        System.arraycopy(result, 0, newArray, 0, result.length);
+        result = newArray;
     }
 
     public int[] toArray() {
