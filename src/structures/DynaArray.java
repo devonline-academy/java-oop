@@ -18,7 +18,7 @@ public class DynaArray {
 
     public void add(int value) {
         if (count == result.length) {
-            grow(result.length * 2);
+            grow(result.length == 0 ? 5 : result.length * 2);
         }
         result[count++] = value;
     }
