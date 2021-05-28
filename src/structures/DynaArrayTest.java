@@ -8,18 +8,6 @@ class DynaArrayTest {
         dynaArray.add(2);
         dynaArray.add(3);
 
-        System.out.println(dynaArray.asString());
-
-        dynaArray.remove(5);
-        // [0, 1, 2, 3]
-        System.out.println(dynaArray.asString());
-
-        dynaArray.remove(0);
-        // [1, 2, 3]
-        System.out.println(dynaArray.asString());
-
-        dynaArray.remove(2);
-        // [1, 3]
-        System.out.println(dynaArray.asString());
+        System.out.println(dynaArray.size());
     }
 }

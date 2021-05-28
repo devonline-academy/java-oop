@@ -89,4 +89,8 @@ public class DynaArray {
         }
         return -1;
     }
+
+    public int size() {
+        return count;
+    }
 }
