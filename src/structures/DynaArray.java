@@ -63,4 +63,30 @@ public class DynaArray {
     public void clear() {
         count = 0;
     }
+
+    public boolean remove(int value) {
+        int index = indexOf(value);
+        if (index != -1) {
+            removeByIndex(index);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private void removeByIndex(int index) {
+        if (index < count - 1) {
+            System.arraycopy(result, index + 1, result, index, count - 1 - index);
+        }
+        count--;
+    }
+
+    private int indexOf(int value) {
+        for (int i = 0; i < count; i++) {
+            if (result[i] == value) {
+                return i;
+            }
+        }
+        return -1;
+    }
 }
