@@ -8,6 +8,10 @@ class DynaArrayTest {
         dynaArray.add(2);
         dynaArray.add(3);
 
-        System.out.println(dynaArray.size());
+        System.out.println(dynaArray.contains(0));
+        System.out.println(dynaArray.contains(2));
+
+        System.out.println(dynaArray.contains(100));
+        System.out.println(dynaArray.contains(-3));
     }
 }
