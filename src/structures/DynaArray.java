@@ -9,7 +9,7 @@ public class DynaArray {
     private int count;
 
     public DynaArray() {
-        result = new int[5];
+        this(5);
     }
 
     public DynaArray(int size) {
