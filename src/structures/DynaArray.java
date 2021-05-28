@@ -12,6 +12,10 @@ public class DynaArray {
         result = new int[5];
     }
 
+    public DynaArray(int size) {
+        result = new int[size];
+    }
+
     public void add(int value) {
         if (count == result.length) {
             grow(result.length * 2);
