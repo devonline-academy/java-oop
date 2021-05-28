@@ -59,4 +59,8 @@ public class DynaArray {
         }
         return stringBuilder.append(']').toString();
     }
+
+    public void clear() {
+        count = 0;
+    }
 }
