@@ -18,6 +18,10 @@ package section001_classes;
 
 import structures.DynaArray;
 
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ */
 public class Solution {
     public static void main(String[] args) {
         int[] array = {1, -2, 3, 4, -5, 8, 9, 5, 6, 34};

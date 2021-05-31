@@ -16,5 +16,9 @@
 
 package section001_classes;
 
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ */
 public class MyClass {
 }

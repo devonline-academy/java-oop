@@ -18,6 +18,11 @@ package section001_classes;
 
 import sun.misc.Unsafe;
 
+
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ */
 public class ObjectCreationWithoutNew {
 
     public static void main(String[] args) throws Exception {

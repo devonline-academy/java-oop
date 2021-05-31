@@ -16,6 +16,10 @@
 
 package section001_classes;
 
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ */
 public class ClassVsObjectV2 {
 
     int value = 5;

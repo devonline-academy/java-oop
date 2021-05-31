@@ -22,6 +22,10 @@ import java.util.Arrays;
 
 //import java.lang.String;
 
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ */
 public class JavaLang {
     public static void main(String[] args) {
         DynaArray dynaArray = new DynaArray();

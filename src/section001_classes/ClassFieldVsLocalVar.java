@@ -18,6 +18,10 @@ package section001_classes;
 
 import structures.DynaArray;
 
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ */
 public class ClassFieldVsLocalVar {
     boolean aBoolean;
     byte aByte;

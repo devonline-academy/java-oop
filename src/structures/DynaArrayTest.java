@@ -16,6 +16,10 @@
 
 package structures;
 
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ */
 class DynaArrayTest {
     public static void main(String[] args) {
         DynaArray dynaArray = new DynaArray();

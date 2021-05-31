@@ -16,6 +16,10 @@
 
 package section001_classes;
 
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ */
 // ${modifier} class ${name}
 // where ${modifier} is from set: [default/package, public]
 public class ClassTemplate {

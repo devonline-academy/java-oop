@@ -16,6 +16,11 @@
 
 package section001_classes;
 
+
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ */
 public class NullOrNotInit {
     public static void main(String[] args) {
         MyClass o1 = new MyClass();

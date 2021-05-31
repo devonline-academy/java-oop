@@ -16,6 +16,10 @@
 
 package section001_classes;
 
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ */
 public class ClassVsObject {
     public static void main(String[] args) {
         int a = 5;

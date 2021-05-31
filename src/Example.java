@@ -14,5 +14,9 @@
  * limitations under the License.
  */
 
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ */
 public class Example {
 }

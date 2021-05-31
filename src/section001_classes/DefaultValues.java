@@ -18,7 +18,7 @@ package section001_classes;
 
 import structures.DynaArray;
 
-/**
+/*
  * boolean aBoolean = false;
  * byte aByte = 0;
  * short aShort = 0;
@@ -30,6 +30,11 @@ import structures.DynaArray;
  * String string = null;
  * int[] array = null;
  * DynaArray dynaArray = null;
+ */
+
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
  */
 public class DefaultValues {
     boolean aBoolean;

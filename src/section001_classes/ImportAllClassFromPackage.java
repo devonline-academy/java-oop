@@ -21,6 +21,10 @@ package section001_classes;
 import java.util.Arrays;
 import java.util.BitSet;
 
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ */
 public class ImportAllClassFromPackage {
     public static void main(String[] args) {
         Arrays.toString(new int[0]);

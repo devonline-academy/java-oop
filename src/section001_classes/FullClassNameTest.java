@@ -19,6 +19,10 @@ package section001_classes;
 import section001_classes.package2.Class1;
 import structures.DynaArray;
 
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ */
 public class FullClassNameTest {
     public static void main(String[] args) {
         DynaArray dynaArray1 = new DynaArray();

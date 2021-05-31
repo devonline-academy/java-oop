@@ -18,6 +18,10 @@ package structures;
 
 import java.util.Arrays;
 
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ */
 public class DynaArray {
 
     private int[] result;
