@@ -25,5 +25,9 @@ public class StaticArrayExample {
         int[] array1 = new int[10];
         String[] array2 = new String[20];
         StaticArrayExample[] array3 = new StaticArrayExample[1_000_000];
+
+        array1[9] = 23;
+        array2[19] = "Hello";
+        array3[999_999] = new StaticArrayExample();
     }
 }
