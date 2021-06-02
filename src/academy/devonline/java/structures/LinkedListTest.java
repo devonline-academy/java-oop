@@ -31,5 +31,6 @@ public class LinkedListTest {
         }
 
         System.out.println(Arrays.toString(list.toArray()));
+        System.out.println(list.asString());
     }
 }
