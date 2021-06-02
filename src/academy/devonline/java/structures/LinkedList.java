@@ -58,4 +58,19 @@ public class LinkedList {
         }
         return builder.append(']').toString();
     }
+
+    /**
+     * @author devonline
+     * @link http://devonline.academy/java
+     */
+    private static class Item {
+
+        private int value;
+
+        private Item next;
+
+        private Item(int value) {
+            this.value = value;
+        }
+    }
 }
