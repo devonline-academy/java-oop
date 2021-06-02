@@ -16,8 +16,6 @@
 
 package academy.devonline.java.structures;
 
-import java.util.Arrays;
-
 /**
  * @author devonline
  * @link http://devonline.academy/java
@@ -29,8 +27,14 @@ public class LinkedListTest {
         for (int i = 1; i <= 3; i++) {
             list.add(i);
         }
+        System.out.println(list.asString());
 
-        System.out.println(Arrays.toString(list.toArray()));
+        list.clear();
+        System.out.println(list.asString());
+
+        for (int i = 1; i <= 10; i++) {
+            list.add(i);
+        }
         System.out.println(list.asString());
     }
 }

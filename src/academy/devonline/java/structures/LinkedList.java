@@ -59,6 +59,10 @@ public class LinkedList {
         return builder.append(']').toString();
     }
 
+    public void clear() {
+        first = null;
+    }
+
     /**
      * @author devonline
      * @link http://devonline.academy/java
