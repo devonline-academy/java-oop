@@ -20,21 +20,42 @@ package academy.devonline.java.structures;
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class LinkedListTest {
-
+class LinkedListTest {
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
-        for (int i = 1; i <= 3; i++) {
-            list.add(i);
-        }
+        list.add(0);
+        list.add(1);
+        list.add(2);
+        list.add(3);
+
         System.out.println(list.asString());
 
-        list.clear();
+        list.remove(5);
+        // [0, 1, 2, 3]
         System.out.println(list.asString());
 
-        for (int i = 1; i <= 10; i++) {
-            list.add(i);
-        }
+        list.remove(0);
+        // [1, 2, 3]
+        System.out.println(list.asString());
+
+        list.remove(2);
+        // [1, 3]
+        System.out.println(list.asString());
+
+        list.remove(1);
+        // [3]
+        System.out.println(list.asString());
+
+        list.remove(3);
+        //[]
+        System.out.println(list.asString());
+        ///////////////////////////////////////////
+        list.add(0);
+        list.add(1);
+
+        list.remove(1);
+        // [0]
         System.out.println(list.asString());
     }
 }
+

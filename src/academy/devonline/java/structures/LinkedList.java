@@ -64,6 +64,55 @@ public class LinkedList {
         last = null;
     }
 
+    public boolean remove(int value) {
+        Pair pair = findPair(value);
+        if (pair != null) {
+            if (pair.current == first && pair.current == last) {
+                first = null;
+                last = null;
+            } else if (pair.current == first) {
+                first = pair.current.next;
+            } else {
+                pair.previous.next = pair.current.next;
+                if (pair.current == last) {
+                    last = pair.previous;
+                }
+            }
+            return true;
+        }
+        return false;
+    }
+
+    private Pair findPair(int value) {
+        Item previous = first;
+        Item current = first;
+        while (current != null) {
+            if (current.value == value) {
+                return new Pair(previous, current);
+            } else {
+                previous = current;
+                current = current.next;
+            }
+        }
+        return null;
+    }
+
+    /**
+     * @author devonline
+     * @link http://devonline.academy/java
+     */
+    private static class Pair {
+
+        private Item previous;
+
+        private Item current;
+
+        private Pair(Item previous, Item current) {
+            this.previous = previous;
+            this.current = current;
+        }
+    }
+
     /**
      * @author devonline
      * @link http://devonline.academy/java
@@ -78,4 +127,6 @@ public class LinkedList {
             this.value = value;
         }
     }
+
+
 }
