@@ -28,6 +28,10 @@ class LinkedListTest {
         list.add(2);
         list.add(3);
 
-        System.out.println(list.size());
+        System.out.println(list.contains(0));
+        System.out.println(list.contains(2));
+
+        System.out.println(list.contains(100));
+        System.out.println(list.contains(-3));
     }
 }
