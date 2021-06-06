@@ -97,6 +97,16 @@ public class LinkedList {
         return null;
     }
 
+    public int size() {
+        Item current = first;
+        int count = 0;
+        while (current != null) {
+            count++;
+            current = current.next;
+        }
+        return count;
+    }
+
     /**
      * @author devonline
      * @link http://devonline.academy/java

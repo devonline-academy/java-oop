@@ -28,34 +28,6 @@ class LinkedListTest {
         list.add(2);
         list.add(3);
 
-        System.out.println(list.asString());
-
-        list.remove(5);
-        // [0, 1, 2, 3]
-        System.out.println(list.asString());
-
-        list.remove(0);
-        // [1, 2, 3]
-        System.out.println(list.asString());
-
-        list.remove(2);
-        // [1, 3]
-        System.out.println(list.asString());
-
-        list.remove(1);
-        // [3]
-        System.out.println(list.asString());
-
-        list.remove(3);
-        //[]
-        System.out.println(list.asString());
-        ///////////////////////////////////////////
-        list.add(0);
-        list.add(1);
-
-        list.remove(1);
-        // [0]
-        System.out.println(list.asString());
+        System.out.println(list.size());
     }
 }
-
