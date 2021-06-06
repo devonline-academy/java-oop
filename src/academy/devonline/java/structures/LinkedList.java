@@ -39,6 +39,16 @@ public class LinkedList {
         count++;
     }
 
+    public void add(int[] array) {
+        for (int value : array) {
+            add(value);
+        }
+    }
+
+    public void add(DynaArray dynaArray) {
+        add(dynaArray.toArray());
+    }
+
     public int[] toArray() {
         DynaArray dynaArray = new DynaArray();
         Item current = first;
