@@ -62,13 +62,14 @@ public class LinkedList {
     }
 
     public int[] toArray() {
-        DynaArray dynaArray = new DynaArray();
+        int[] result = new int[count];
+        int index = 0;
         Item current = first;
         while (current != null) {
-            dynaArray.add(current.value);
+            result[index++] = current.value;
             current = current.next;
         }
-        return dynaArray.toArray();
+        return result;
     }
 
     public String asString() {

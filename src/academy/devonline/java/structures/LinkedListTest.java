@@ -16,6 +16,8 @@
 
 package academy.devonline.java.structures;
 
+import java.util.Arrays;
+
 /**
  * @author devonline
  * @link http://devonline.academy/java
@@ -30,6 +32,6 @@ class LinkedListTest {
         list.add(secondList);
         //list.add(4);
 
-        System.out.println(list.asString());
+        System.out.println(Arrays.toString(list.toArray()));
     }
 }
