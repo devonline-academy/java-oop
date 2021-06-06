@@ -22,13 +22,13 @@ package academy.devonline.java.structures;
  */
 class LinkedListTest {
     public static void main(String[] args) {
-        DynaArray dynaArray = new DynaArray();
-        int[] array = {0, 1, 2, 3, 4};
-        dynaArray.add(array);
+        LinkedList secondList = new LinkedList();
+        secondList.add(new int[]{4, 5, 6});
 
         LinkedList list = new LinkedList();
-        list.add(array);
-        list.add(dynaArray);
+        list.add(new int[]{1, 2, 3});
+        list.add(secondList);
+        //list.add(4);
 
         System.out.println(list.asString());
     }
