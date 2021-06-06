@@ -51,6 +51,10 @@ public class DynaArray {
         add(dynaArray.result, dynaArray.count);
     }
 
+    public void add(LinkedList list) {
+        add(list.toArray());
+    }
+
     private void add(int[] array, int length) {
         if (result.length - count < length) {
             grow(count + length);

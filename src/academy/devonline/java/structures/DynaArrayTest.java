@@ -22,16 +22,12 @@ package academy.devonline.java.structures;
  */
 class DynaArrayTest {
     public static void main(String[] args) {
+        LinkedList list = new LinkedList();
+        list.add(new int[]{0, 1, 2, 3});
         DynaArray dynaArray = new DynaArray();
-        dynaArray.add(0);
-        dynaArray.add(1);
-        dynaArray.add(2);
-        dynaArray.add(3);
 
-        System.out.println(dynaArray.contains(0));
-        System.out.println(dynaArray.contains(2));
+        dynaArray.add(list);
 
-        System.out.println(dynaArray.contains(100));
-        System.out.println(dynaArray.contains(-3));
+        System.out.println(dynaArray.asString());
     }
 }
