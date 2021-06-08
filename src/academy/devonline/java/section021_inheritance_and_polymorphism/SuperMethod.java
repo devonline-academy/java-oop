@@ -37,11 +37,13 @@ public class SuperMethod {
 
         @Override
         void method1() {
-
+            super.method1();
         }
 
         void method3() {
-
+            method1();
+            this.method1();
+            super.method1();
         }
     }
 
