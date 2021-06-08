@@ -87,7 +87,7 @@ public class LinkedList extends BaseDataStructure {
     public void clear() {
         first = null;
         last = null;
-        count = 0;
+        super.clear();
     }
 
     public boolean remove(int value) {
