@@ -83,6 +83,7 @@ public class LinkedList extends BaseDataStructure {
         return builder.append(']').toString();
     }
 
+    @Override
     public void clear() {
         first = null;
         last = null;

@@ -27,4 +27,8 @@ public class BaseDataStructure {
     public int size() {
         return count;
     }
+
+    public void clear() {
+        count = 0;
+    }
 }
