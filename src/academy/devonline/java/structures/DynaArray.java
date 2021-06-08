@@ -22,11 +22,9 @@ import java.util.Arrays;
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class DynaArray {
+public class DynaArray extends BaseDataStructure {
 
     private int[] result;
-
-    private int count;
 
     public DynaArray() {
         this(5);
@@ -112,10 +110,6 @@ public class DynaArray {
             }
         }
         return -1;
-    }
-
-    public int size() {
-        return count;
     }
 
     public boolean contains(int value) {

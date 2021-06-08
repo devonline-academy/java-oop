@@ -20,13 +20,11 @@ package academy.devonline.java.structures;
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class LinkedList {
+public class LinkedList extends BaseDataStructure {
 
     private Item first;
 
     private Item last;
-
-    private int count;
 
     public void add(int value) {
         Item item = new Item(value);
@@ -123,10 +121,6 @@ public class LinkedList {
             }
         }
         return null;
-    }
-
-    public int size() {
-        return count;
     }
 
     public boolean contains(int value) {
