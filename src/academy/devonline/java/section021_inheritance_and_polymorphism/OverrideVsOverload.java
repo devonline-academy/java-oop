@@ -31,7 +31,12 @@ public class OverrideVsOverload {
 
     private static class Child extends Parent {
 
+        @Override
         void method1() {
+
+        }
+
+        void method1(int value) {
 
         }
     }
