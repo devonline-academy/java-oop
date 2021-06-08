@@ -40,11 +40,11 @@ public class SuperConstructor {
     private static class Child extends Parent {
 
         private Child() {
-            super();
+            System.out.println("Child.<init>()");
         }
     }
 
     public static void main(String[] args) {
-        Child child = new Child();
+        new Child();
     }
 }
