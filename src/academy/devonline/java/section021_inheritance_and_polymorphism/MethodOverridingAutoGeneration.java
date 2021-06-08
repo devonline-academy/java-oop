@@ -31,9 +31,10 @@ public class MethodOverridingAutoGeneration {
 
     private static class Child extends Parent {
 
-        @Override
-        void method1() {
-            super.method1();
-        }
+    }
+
+    public static void main(String[] args) {
+        Child child = new Child();
+        child.method1();
     }
 }
