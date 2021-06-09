@@ -28,6 +28,6 @@ class DynaArrayTest {
 
         dynaArray.add(list);
 
-        System.out.println(dynaArray.asString());
+        System.out.println(dynaArray);
     }
 }

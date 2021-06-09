@@ -71,7 +71,8 @@ public final class DynaArray extends BaseDataStructure {
         return Arrays.copyOf(result, count);
     }
 
-    public String asString() {
+    @Override
+    public String toString() {
         final StringBuilder stringBuilder = new StringBuilder().append('[');
         for (int i = 0; i < count; i++) {
             stringBuilder.append(result[i]);

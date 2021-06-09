@@ -70,7 +70,8 @@ public final class LinkedList extends BaseDataStructure {
         return result;
     }
 
-    public String asString() {
+    @Override
+    public String toString() {
         StringBuilder builder = new StringBuilder().append('[');
         Item current = first;
         while (current != null) {
