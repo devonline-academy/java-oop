@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package academy.devonline.java.section021_inheritance_and_polymorphism;
+package academy.devonline.java.section021_inheritance;
 
 /**
  * @author devonline

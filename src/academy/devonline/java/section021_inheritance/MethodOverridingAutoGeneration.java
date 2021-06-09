@@ -14,38 +14,27 @@
  * limitations under the License.
  */
 
-package academy.devonline.java.section021_inheritance_and_polymorphism;
+package academy.devonline.java.section021_inheritance;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class SuperConstructor {
+public class MethodOverridingAutoGeneration {
 
     private static class Parent {
 
-        private Parent() {
-            System.out.println("Parent.<init>()");
-        }
+        void method1() {
 
-        private Parent(int value) {
-            System.out.println("Parent.<init>(int)");
-        }
-
-        private Parent(boolean value) {
-            System.out.println("Parent.<init>(boolean)");
         }
     }
 
     private static class Child extends Parent {
 
-        private Child() {
-            super(12);
-            System.out.println("Child.<init>()");
-        }
     }
 
     public static void main(String[] args) {
-        new Child();
+        Child child = new Child();
+        child.method1();
     }
 }

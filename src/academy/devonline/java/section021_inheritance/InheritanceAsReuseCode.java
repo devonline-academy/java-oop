@@ -14,38 +14,30 @@
  * limitations under the License.
  */
 
-package academy.devonline.java.section021_inheritance_and_polymorphism;
+package academy.devonline.java.section021_inheritance;
+
+import javax.swing.*;
+import java.awt.*;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class SuperWithParam {
-
-    private static class GrandParent {
-
-        int value;
-
-        public GrandParent(int value) {
-            this.value = value;
-        }
-    }
-
-    private static class Parent extends GrandParent {
-
-        public Parent(int value) {
-            super(value);
-        }
-    }
-
-    private static class Child extends Parent {
-
-        public Child(int value) {
-            super(value);
-        }
-    }
+public class InheritanceAsReuseCode {
 
     public static void main(String[] args) {
-        System.out.println(new Child(12).value);
+        new ApplicationWindow().setVisible(true);
+    }
+
+    private static class ApplicationWindow extends JFrame {
+        public ApplicationWindow() throws HeadlessException {
+            setTitle("Hello world");
+            setPreferredSize(new Dimension(500, 300));
+            setDefaultCloseOperation(EXIT_ON_CLOSE);
+            pack();
+
+            Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+            setLocation(dim.width / 2 - getSize().width / 2, dim.height / 2 - getSize().height / 2);
+        }
     }
 }

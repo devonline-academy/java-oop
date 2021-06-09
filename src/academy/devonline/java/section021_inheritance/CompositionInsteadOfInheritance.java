@@ -14,27 +14,35 @@
  * limitations under the License.
  */
 
-package academy.devonline.java.section021_inheritance_and_polymorphism;
+package academy.devonline.java.section021_inheritance;
+
+import javax.swing.*;
+import java.awt.*;
+
+import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class MethodOverridingAutoGeneration {
+public class CompositionInsteadOfInheritance {
 
-    private static class Parent {
+    private JFrame frame;
 
-        void method1() {
+    public CompositionInsteadOfInheritance() {
+        frame = new JFrame();
+        frame.setTitle("Hello world");
+        frame.setPreferredSize(new Dimension(500, 300));
+        frame.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        frame.pack();
 
-        }
-    }
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+        frame.setLocation(dim.width / 2 - frame.getSize().width / 2, dim.height / 2 - frame.getSize().height / 2);
 
-    private static class Child extends Parent {
-
+        frame.setVisible(true);
     }
 
     public static void main(String[] args) {
-        Child child = new Child();
-        child.method1();
+        new CompositionInsteadOfInheritance();
     }
 }

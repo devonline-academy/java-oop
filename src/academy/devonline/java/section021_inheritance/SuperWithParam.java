@@ -14,29 +14,38 @@
  * limitations under the License.
  */
 
-package academy.devonline.java.section021_inheritance_and_polymorphism;
+package academy.devonline.java.section021_inheritance;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class ConstructorInvocationOrder {
+public class SuperWithParam {
 
-    private static class Parent {
+    private static class GrandParent {
 
-        private Parent() {
-            System.out.println("Parent.<init>()");
+        int value;
+
+        public GrandParent(int value) {
+            this.value = value;
+        }
+    }
+
+    private static class Parent extends GrandParent {
+
+        public Parent(int value) {
+            super(value);
         }
     }
 
     private static class Child extends Parent {
 
-        private Child() {
-            System.out.println("Child.<init>()");
+        public Child(int value) {
+            super(value);
         }
     }
 
     public static void main(String[] args) {
-        new Child();
+        System.out.println(new Child(12).value);
     }
 }

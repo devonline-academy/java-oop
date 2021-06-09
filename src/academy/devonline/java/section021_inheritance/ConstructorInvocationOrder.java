@@ -14,25 +14,29 @@
  * limitations under the License.
  */
 
-package academy.devonline.java.section021_inheritance_and_polymorphism;
-
-import academy.devonline.java.structures.DynaArray;
-import academy.devonline.java.structures.LinkedList;
+package academy.devonline.java.section021_inheritance;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class MethodInheritance {
-    public static void main(String[] args) {
-        DynaArray dynaArray = new DynaArray();
-        dynaArray.add(2);
-        System.out.println(dynaArray.size());
-        dynaArray.clear();
+public class ConstructorInvocationOrder {
 
-        LinkedList list = new LinkedList();
-        list.add(2);
-        System.out.println(list.size());
-        list.clear();
+    private static class Parent {
+
+        private Parent() {
+            System.out.println("Parent.<init>()");
+        }
+    }
+
+    private static class Child extends Parent {
+
+        private Child() {
+            System.out.println("Child.<init>()");
+        }
+    }
+
+    public static void main(String[] args) {
+        new Child();
     }
 }

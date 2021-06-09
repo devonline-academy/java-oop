@@ -14,17 +14,21 @@
  * limitations under the License.
  */
 
-package academy.devonline.java.section021_inheritance_and_polymorphism;
+package academy.devonline.java.section021_inheritance;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class OverrideVsOverload {
+public class SuperMethod {
 
     private static class Parent {
 
         void method1() {
+
+        }
+
+        void method2() {
 
         }
     }
@@ -33,18 +37,21 @@ public class OverrideVsOverload {
 
         @Override
         void method1() {
-
+            method2();
         }
 
-        void method1(int value) {
-
+        void method3() {
+            method1();
+            super.method1();
         }
     }
 
     public static void main(String[] args) {
         Child child = new Child();
         child.method1();
-        //child.method1(12);
-    }
+        child.method2();
+        child.method3();
 
+        child.method1();
+    }
 }

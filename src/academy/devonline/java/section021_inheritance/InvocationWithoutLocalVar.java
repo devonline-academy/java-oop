@@ -14,44 +14,28 @@
  * limitations under the License.
  */
 
-package academy.devonline.java.section021_inheritance_and_polymorphism;
+package academy.devonline.java.section021_inheritance;
 
 /**
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class SuperMethod {
+public class InvocationWithoutLocalVar {
 
-    private static class Parent {
+    int field;
 
-        void method1() {
-
-        }
-
-        void method2() {
-
-        }
-    }
-
-    private static class Child extends Parent {
-
-        @Override
-        void method1() {
-            method2();
-        }
-
-        void method3() {
-            method1();
-            super.method1();
-        }
+    void doSomething() {
+        System.out.println("doSomething");
     }
 
     public static void main(String[] args) {
-        Child child = new Child();
-        child.method1();
-        child.method2();
-        child.method3();
+        // 1)
+        InvocationWithoutLocalVar object = new InvocationWithoutLocalVar();
+        System.out.println(object.field);
+        object.doSomething();
 
-        child.method1();
+        // 2)
+        System.out.println(new InvocationWithoutLocalVar().field);
+        new InvocationWithoutLocalVar().doSomething();
     }
 }
