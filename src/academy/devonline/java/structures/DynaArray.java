@@ -22,7 +22,7 @@ import java.util.Arrays;
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class DynaArray extends BaseDataStructure {
+public final class DynaArray extends BaseDataStructure {
 
     private int[] result;
 

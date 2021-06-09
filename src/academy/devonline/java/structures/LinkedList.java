@@ -20,7 +20,7 @@ package academy.devonline.java.structures;
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class LinkedList extends BaseDataStructure {
+public final class LinkedList extends BaseDataStructure {
 
     private Item first;
 
