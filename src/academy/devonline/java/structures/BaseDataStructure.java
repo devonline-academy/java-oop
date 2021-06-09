@@ -24,7 +24,7 @@ public class BaseDataStructure {
 
     protected int count;
 
-    public int size() {
+    public final int size() {
         return count;
     }
 
