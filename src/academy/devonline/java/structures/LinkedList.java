@@ -51,6 +51,7 @@ public final class LinkedList extends BaseDataStructure {
         }
     }
 
+    @Override
     public int[] toArray() {
         int[] result = new int[count];
         int index = 0;
@@ -83,6 +84,7 @@ public final class LinkedList extends BaseDataStructure {
         super.clear();
     }
 
+    @Override
     public boolean remove(int value) {
         Pair pair = findPair(value);
         if (pair != null) {
@@ -117,6 +119,7 @@ public final class LinkedList extends BaseDataStructure {
         return null;
     }
 
+    @Override
     public boolean contains(int value) {
         return findPair(value) != null;
     }

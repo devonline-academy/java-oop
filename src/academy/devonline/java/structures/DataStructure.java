@@ -20,34 +20,23 @@ package academy.devonline.java.structures;
  * @author devonline
  * @link http://devonline.academy/java
  */
-public abstract class BaseDataStructure extends DataStructure {
+public abstract class DataStructure {
 
-    protected int count;
+    public abstract void add(int value);
 
-    @Override
-    public void add(int[] array) {
-        for (int value : array) {
-            add(value);
-        }
-    }
+    public abstract void add(int[] array);
 
-    @Override
-    public void add(DynaArray dynaArray) {
-        add(dynaArray.toArray());
-    }
+    public abstract void add(DynaArray dynaArray);
 
-    @Override
-    public void add(LinkedList list) {
-        add(list.toArray());
-    }
+    public abstract void add(LinkedList list);
 
-    @Override
-    public final int size() {
-        return count;
-    }
+    public abstract int size();
 
-    @Override
-    public void clear() {
-        count = 0;
-    }
+    public abstract void clear();
+
+    public abstract int[] toArray();
+
+    public abstract boolean remove(int value);
+
+    public abstract boolean contains(int value);
 }
