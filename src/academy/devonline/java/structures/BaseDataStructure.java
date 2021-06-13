@@ -20,13 +20,11 @@ package academy.devonline.java.structures;
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class BaseDataStructure {
+public abstract class BaseDataStructure {
 
     protected int count;
 
-    public void add(int value) {
-
-    }
+    public abstract void add(int value);
 
     public void add(int[] array) {
         for (int value : array) {
