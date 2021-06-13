@@ -20,23 +20,23 @@ package academy.devonline.java.structures;
  * @author devonline
  * @link http://devonline.academy/java
  */
-public abstract class DataStructure {
+public interface DataStructure {
 
-    public abstract void add(int value);
+    void add(int value);
 
-    public abstract void add(int[] array);
+    void add(int[] array);
 
-    public abstract void add(DynaArray dynaArray);
+    void add(DynaArray dynaArray);
 
-    public abstract void add(LinkedList list);
+    void add(LinkedList list);
 
-    public abstract int size();
+    int size();
 
-    public abstract void clear();
+    void clear();
 
-    public abstract int[] toArray();
+    int[] toArray();
 
-    public abstract boolean remove(int value);
+    boolean remove(int value);
 
-    public abstract boolean contains(int value);
+    boolean contains(int value);
 }

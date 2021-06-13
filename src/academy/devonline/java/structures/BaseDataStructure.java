@@ -20,7 +20,7 @@ package academy.devonline.java.structures;
  * @author devonline
  * @link http://devonline.academy/java
  */
-public abstract class BaseDataStructure extends DataStructure {
+public abstract class BaseDataStructure implements DataStructure {
 
     protected int count;
 
