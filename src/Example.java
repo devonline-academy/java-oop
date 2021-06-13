@@ -14,9 +14,16 @@
  * limitations under the License.
  */
 
+import academy.devonline.java.section031_polymorphism.LateBinding;
+
 /**
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class Example {
+public class Example extends LateBinding.Parent {
+
+    @Override
+    public void doSomething() {
+        System.out.println("Example");
+    }
 }
