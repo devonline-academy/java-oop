@@ -26,6 +26,7 @@ public final class LinkedList extends BaseDataStructure {
 
     private Item last;
 
+    @Override
     public void add(int value) {
         Item item = new Item(value);
         if (first == null) {
@@ -37,16 +38,7 @@ public final class LinkedList extends BaseDataStructure {
         count++;
     }
 
-    public void add(int[] array) {
-        for (int value : array) {
-            add(value);
-        }
-    }
-
-    public void add(DynaArray dynaArray) {
-        add(dynaArray.toArray());
-    }
-
+    @Override
     public void add(LinkedList secondList) {
         if (secondList.count > 0) {
             if (first == null) {

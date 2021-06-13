@@ -24,6 +24,24 @@ public class BaseDataStructure {
 
     protected int count;
 
+    public void add(int value) {
+
+    }
+
+    public void add(int[] array) {
+        for (int value : array) {
+            add(value);
+        }
+    }
+
+    public void add(DynaArray dynaArray) {
+        add(dynaArray.toArray());
+    }
+
+    public void add(LinkedList list) {
+        add(list.toArray());
+    }
+
     public final int size() {
         return count;
     }

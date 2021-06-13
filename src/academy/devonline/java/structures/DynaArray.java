@@ -34,6 +34,7 @@ public final class DynaArray extends BaseDataStructure {
         result = new int[size];
     }
 
+    @Override
     public void add(int value) {
         if (count == result.length) {
             grow(result.length == 0 ? 5 : result.length * 2);
@@ -41,16 +42,14 @@ public final class DynaArray extends BaseDataStructure {
         result[count++] = value;
     }
 
+    @Override
     public void add(int[] array) {
         add(array, array.length);
     }
 
+    @Override
     public void add(DynaArray dynaArray) {
         add(dynaArray.result, dynaArray.count);
-    }
-
-    public void add(LinkedList list) {
-        add(list.toArray());
     }
 
     private void add(int[] array, int length) {
