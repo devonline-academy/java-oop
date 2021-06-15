@@ -23,12 +23,16 @@ package academy.devonline.java.section031_polymorphism;
 public class GetClassUsage {
 
     public static void main(String[] args) {
-        Object o = new Parent();
+        Object o = new Child();
 
-        boolean result = o instanceof Child;
+        /*boolean result = o instanceof Child;
         System.out.println(result);
         System.out.println(o instanceof Child);
         if (o instanceof Child) {
+            System.out.println("Child");
+        }*/
+        System.out.println(o.getClass());
+        if (o.getClass() == Child.class) {
             System.out.println("Child");
         }
     }
