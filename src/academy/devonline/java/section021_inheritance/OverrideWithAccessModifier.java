@@ -32,7 +32,7 @@ public class OverrideWithAccessModifier {
 
     private static class Parent {
 
-        public Parent getOwner() {
+        protected Parent getOwner() {
             return this;
         }
     }
