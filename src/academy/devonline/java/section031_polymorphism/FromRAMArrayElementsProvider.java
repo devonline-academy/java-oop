@@ -20,18 +20,23 @@ package academy.devonline.java.section031_polymorphism;
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class SumCalculator {
+public class FromRAMArrayElementsProvider implements ArrayElementsProvider {
 
-    private static long sum(ArrayElementsProvider arrayElementsProvider) {
-        long sum = 0;
-        while (arrayElementsProvider.hasMoreElements()) {
-            sum += arrayElementsProvider.nextElement();
-        }
-        return sum;
+    private int[] array;
+
+    private int index;
+
+    public FromRAMArrayElementsProvider(int[] array) {
+        this.array = array;
     }
 
-    public static void main(String[] args) {
-        ArrayElementsProvider arrayElementsProvider = new FromRAMArrayElementsProvider(new int[]{1, 2, 3, 4, 5});
-        System.out.println(sum(arrayElementsProvider));
+    @Override
+    public boolean hasMoreElements() {
+        return index < array.length;
+    }
+
+    @Override
+    public int nextElement() {
+        return array[index++];
     }
 }
