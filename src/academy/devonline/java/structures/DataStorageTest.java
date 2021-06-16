@@ -23,7 +23,7 @@ package academy.devonline.java.structures;
 class DataStorageTest {
 
     public static void main(String[] args) {
-        DataStorage dataStorage = new QueueBasedOnArray(); // new Stack() or new Queue();
+        DataStorage dataStorage = new StackBasedOnArray(); // new Stack() or new Queue();
 
         for (int i = 0; i < 5; i++) {
             dataStorage.add(i);
