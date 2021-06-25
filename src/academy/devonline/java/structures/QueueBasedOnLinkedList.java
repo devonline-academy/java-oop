@@ -23,18 +23,8 @@ package academy.devonline.java.structures;
 public final class QueueBasedOnLinkedList extends BasedOnLinkedListDataStorage {
 
     @Override
-    public int get() {
-        if (size > 0) {
-            int result = first.value;
-            first = first.next;
-            size--;
-            if (size == 0) {
-                last = null;
-            }
-            return result;
-        } else {
-            // TODO throw Exception
-            return 0;
-        }
+    protected void addNextItem(Item item) {
+        last.next = item;
+        last = item;
     }
 }

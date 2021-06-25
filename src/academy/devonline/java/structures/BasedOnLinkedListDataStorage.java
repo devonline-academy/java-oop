@@ -32,10 +32,27 @@ public abstract class BasedOnLinkedListDataStorage extends BaseDataStorage {
         if (first == null) {
             first = last = item;
         } else {
-            last.next = item;
-            last = item;
+            addNextItem(item);
         }
         size++;
+    }
+
+    protected abstract void addNextItem(Item item);
+
+    @Override
+    public final int get() {
+        if (size > 0) {
+            int result = first.value;
+            first = first.next;
+            size--;
+            if (size == 0) {
+                last = null;
+            }
+            return result;
+        } else {
+            // TODO throw Exception
+            return 0;
+        }
     }
 
     /**
