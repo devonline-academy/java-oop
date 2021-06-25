@@ -29,7 +29,7 @@ public final class QueueBasedOnArray extends BasedOnArrayDataStorage {
     public QueueBasedOnArray() {
     }
 
-    /*@Override
+    @Override
     public int get() {
         if (size > 0) {
             int result = array[0];
@@ -37,20 +37,8 @@ public final class QueueBasedOnArray extends BasedOnArrayDataStorage {
             size--;
             return result;
         } else {
-            throw new RuntimeException("Queue is empty");
+            // TODO throw Exception
+            return 0;
         }
-    }*/
-
-    @Override
-    protected int getIfNotEmpty() {
-        int result = array[0];
-        System.arraycopy(array, 1, array, 0, array.length - 1);
-        size--;
-        return result;
-    }
-
-    @Override
-    protected RuntimeException createEmptyException() {
-        return new RuntimeException("Queue is empty");
     }
 }

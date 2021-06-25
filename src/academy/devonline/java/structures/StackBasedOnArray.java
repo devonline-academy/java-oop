@@ -29,22 +29,13 @@ public final class StackBasedOnArray extends BasedOnArrayDataStorage {
     public StackBasedOnArray() {
     }
 
-    /*@Override
+    @Override
     public int get() {
         if (size > 0) {
             return array[--size];
         } else {
-            throw new RuntimeException("Stack is empty");
+            // TODO throw Exception
+            return 0;
         }
-    }*/
-
-    @Override
-    protected int getIfNotEmpty() {
-        return array[--size];
-    }
-
-    @Override
-    protected RuntimeException createEmptyException() {
-        return new RuntimeException("Stack is empty");
     }
 }
