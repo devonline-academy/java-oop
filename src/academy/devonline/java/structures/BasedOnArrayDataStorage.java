@@ -53,12 +53,13 @@ public abstract class BasedOnArrayDataStorage implements DataStorage {
         if (size > 0) {
             return getIfNotEmpty();
         } else {
-            // TODO throw Exception
-            return 0;
+            throw createEmptyException();
         }
     }
 
     protected abstract int getIfNotEmpty();
+
+    protected abstract RuntimeException createEmptyException();
 
     @Override
     public final int size() {
