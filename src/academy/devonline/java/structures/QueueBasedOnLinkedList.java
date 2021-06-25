@@ -20,20 +20,21 @@ package academy.devonline.java.structures;
  * @author devonline
  * @link http://devonline.academy/java
  */
-class DataStorageTest {
+public final class QueueBasedOnLinkedList extends BasedOnLinkedListDataStorage {
 
-    public static void main(String[] args) {
-        DataStorage dataStorage = new QueueBasedOnLinkedList(); // new Stack() or new Queue();
-
-        for (int i = 0; i < 5; i++) {
-            dataStorage.add(i);
+    @Override
+    public int get() {
+        if (size > 0) {
+            int result = first.value;
+            first = first.next;
+            size--;
+            if (size == 0) {
+                last = null;
+            }
+            return result;
+        } else {
+            // TODO throw Exception
+            return 0;
         }
-
-        // 4 3 2 1 0 - for Stack
-        // 0 1 2 3 4 - for Queue
-        while (dataStorage.size() > 0) {
-            System.out.print(dataStorage.get() + " ");
-        }
-        System.out.println();
     }
 }
