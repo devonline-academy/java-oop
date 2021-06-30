@@ -37,6 +37,17 @@ final class PasswordResetServiceTest {
     public static void main(String[] args) {
         PasswordResetServiceTest passwordResetServiceTest = new PasswordResetServiceTest(new PasswordResetService(
                 new FromRAMAccountRepository(),
+                new ShowSuccessAccountNotFoundByEmailHandler(),
+                new DisableAccountNotActiveHandler(),
+                new DefaultNumberVerificationCodeGenerator(6),
+                new StubEmailService()
+        ));
+        passwordResetServiceTest.test("test0@devonline.academy");
+        passwordResetServiceTest.test("test1@devonline.academy");
+        passwordResetServiceTest.test("test2@devonline.academy");
+
+        passwordResetServiceTest = new PasswordResetServiceTest(new PasswordResetService(
+                new FromRAMAccountRepository(),
                 new DisplayAccountNotFoundByEmailHandler(),
                 new DisableAccountNotActiveHandler(),
                 new DefaultNumberVerificationCodeGenerator(6),
