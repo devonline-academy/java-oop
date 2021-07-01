@@ -20,11 +20,11 @@ package academy.devonline.java.section041_oop;
  * @author devonline
  * @link http://devonline.academy/java
  */
-public class ReadOnlyObject {
+public class ImmutableObject {
 
-    private String value;
+    private final String value;
 
-    public ReadOnlyObject(String value) {
+    public ImmutableObject(String value) {
         this.value = value;
     }
 
