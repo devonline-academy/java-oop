@@ -22,15 +22,15 @@ package academy.devonline.java.section041_oop.restore;
  */
 public final class PasswordResetService {
 
-    private AccountRepository accountRepository;
+    private final AccountRepository accountRepository;
 
-    private AccountNotFoundByEmailHandler accountNotFoundByEmailHandler;
+    private final AccountNotFoundByEmailHandler accountNotFoundByEmailHandler;
 
-    private AccountNotActiveHandler accountNotActiveHandler;
+    private final AccountNotActiveHandler accountNotActiveHandler;
 
-    private VerificationCodeGenerator verificationCodeGenerator;
+    private final VerificationCodeGenerator verificationCodeGenerator;
 
-    private EmailService emailService;
+    private final EmailService emailService;
 
     public PasswordResetService(AccountRepository accountRepository,
                                 AccountNotFoundByEmailHandler accountNotFoundByEmailHandler,

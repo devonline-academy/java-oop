@@ -25,7 +25,7 @@ import academy.devonline.java.section041_oop.restore.AccountRepository;
  */
 public final class FromRAMAccountRepository implements AccountRepository {
 
-    private DefaultAccount[] accounts = {
+    private final DefaultAccount[] accounts = {
             new DefaultAccount("test1@devonline.academy", true),
             new DefaultAccount("test2@devonline.academy", false)
     };

@@ -24,9 +24,9 @@ import academy.devonline.java.section041_oop.restore.Account;
  */
 public final class DefaultAccount implements Account {
 
-    private String email;
+    private final String email;
 
-    private boolean active;
+    private final boolean active;
 
     private String code;
 

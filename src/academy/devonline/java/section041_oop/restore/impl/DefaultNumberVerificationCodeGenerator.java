@@ -26,9 +26,9 @@ import java.util.Random;
  */
 public final class DefaultNumberVerificationCodeGenerator implements VerificationCodeGenerator {
 
-    private Random random = new Random();
+    private final Random random = new Random();
 
-    private int length;
+    private final int length;
 
     public DefaultNumberVerificationCodeGenerator(int length) {
         this.length = length;

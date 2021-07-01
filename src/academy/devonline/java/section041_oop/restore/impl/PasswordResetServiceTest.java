@@ -24,7 +24,7 @@ import academy.devonline.java.section041_oop.restore.PasswordResetService;
  */
 final class PasswordResetServiceTest {
 
-    private PasswordResetService service;
+    private final PasswordResetService service;
 
     public PasswordResetServiceTest(PasswordResetService service) {
         this.service = service;
