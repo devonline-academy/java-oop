@@ -24,11 +24,43 @@ import java.math.BigDecimal;
  */
 public class Product {
 
-    public String name;
+    private String name;
 
-    public String description;
+    private String description;
 
-    public BigDecimal price;
+    private BigDecimal price;
+
+    public Product(String name, String description, BigDecimal price) {
+        this.name = name;
+        this.description = description;
+        this.price = price;
+    }
+
+    public void setName(String name) {
+        if (!name.isBlank()) {
+            this.name = name;
+        }
+    }
+
+    public void setDescription(String description) {
+        if (!description.isBlank()) {
+            this.description = description;
+        }
+    }
+
+    /*public void setPrice(BigDecimal price) {
+        if (price.compareTo(BigDecimal.ZERO) > 0) {
+            this.price = price;
+        }
+    }*/
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 
     public BigDecimal getPrice() {
         if (isNowWeekend()) {
