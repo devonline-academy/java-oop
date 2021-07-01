@@ -16,6 +16,8 @@
 
 package academy.devonline.java.section041_oop;
 
+import java.math.BigDecimal;
+
 /**
  * @author devonline
  * @link http://devonline.academy/java
@@ -26,6 +28,9 @@ final class ProductTest {
         Product[] products = null;
 
         for (Product product : products) {
+
+            product.price = new BigDecimal("-23.23");
+
             System.out.println(product.name);
             System.out.println(product.description);
             System.out.println(product.price);
