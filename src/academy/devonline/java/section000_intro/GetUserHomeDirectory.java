@@ -22,6 +22,8 @@ package academy.devonline.java.section000_intro;
  */
 public class GetUserHomeDirectory {
     public static void main(String[] args) {
-        System.out.println(System.getenv("HOMEPATH"));
+        // System.out.println(System.getenv("HOMEPATH"));
+        // System.out.println(System.getenv("HOME"));
+        System.out.println(System.getProperty("user.home"));
     }
 }
