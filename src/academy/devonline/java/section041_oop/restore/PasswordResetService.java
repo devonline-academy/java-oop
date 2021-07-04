@@ -32,11 +32,11 @@ public final class PasswordResetService {
 
     private final EmailService emailService;
 
-    public PasswordResetService(AccountRepository accountRepository,
-                                AccountNotFoundByEmailHandler accountNotFoundByEmailHandler,
-                                AccountNotActiveHandler accountNotActiveHandler,
-                                VerificationCodeGenerator verificationCodeGenerator,
-                                EmailService emailService) {
+    public PasswordResetService(final AccountRepository accountRepository,
+                                final AccountNotFoundByEmailHandler accountNotFoundByEmailHandler,
+                                final AccountNotActiveHandler accountNotActiveHandler,
+                                final VerificationCodeGenerator verificationCodeGenerator,
+                                final EmailService emailService) {
         this.accountRepository = accountRepository;
         this.accountNotFoundByEmailHandler = accountNotFoundByEmailHandler;
         this.accountNotActiveHandler = accountNotActiveHandler;
@@ -44,17 +44,17 @@ public final class PasswordResetService {
         this.emailService = emailService;
     }
 
-    public String reset(String email) {
-        Account account = accountRepository.findByEmail(email);
+    public String reset(final String email) {
+        final Account account = accountRepository.findByEmail(email);
         if (account == null) {
             return accountNotFoundByEmailHandler.handle(email);
         } else if (account.isNotActive()) {
-            String result = accountNotActiveHandler.handle(account);
+            final String result = accountNotActiveHandler.handle(account);
             if (result != null) {
                 return result;
             }
         }
-        String code = verificationCodeGenerator.generate();
+        final String code = verificationCodeGenerator.generate();
         account.setCode(code);
         accountRepository.update(account);
         emailService.sendPasswordResetEmail(email, code);
