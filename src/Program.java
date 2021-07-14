@@ -1,14 +1,13 @@
-import java.util.Arrays;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 /**
- * Usage:
- * java Program 23 true false hello world
- *
  * @author devonline
  * @link http://devonline.academy/java
  */
 public class Program {
-    public static void main(String[] args) {
-        System.out.println(Arrays.toString(args));
+    public static void main(String[] args) throws IOException {
+        System.out.println(Files.readString(Paths.get(System.getProperty("user.home") + "config.txt")));
     }
 }
