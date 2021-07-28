@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import java.io.File;
+import java.util.Scanner;
 
 /**
  * @author devonline
@@ -22,15 +22,11 @@ import java.io.File;
  */
 public class Program {
     public static void main(String[] args) {
-        // Home directory: `$HOME` or `%HOMEPATH%`
-        System.out.println(System.getProperty("user.home"));
-        // New line separator: `\n` or `\r\n`
-        System.out.println(System.lineSeparator());
-        // Path element separator: `/` or `\`
-        System.out.println(File.pathSeparator);
-        // Absolute or relative paths separator: `:` or `;`
-        System.out.println(File.separator);
-        // Read environment variable with name `USERNAME`
-        System.out.println(System.getenv("USERNAME"));
+        // stdin
+        final String data = new Scanner(System.in).nextLine();
+        // stdout
+        System.out.println(data);
+        // stderr
+        System.err.println(data);
     }
 }
