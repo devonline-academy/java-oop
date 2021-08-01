@@ -15,8 +15,8 @@
   -->
 
 <xml>
-    <name name="value">java-oop</name>
-    <name></name>
+    <name name='value'>java-oop</name>
+    <name>&lt;&gt;&amp;&apos;&quot;</name>
     <name/>
     <sources>
         <language-level>11</language-level>
