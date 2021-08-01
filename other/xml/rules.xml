@@ -26,6 +26,7 @@
             <item>12</item>
         </complex>
     </sources>
+    <!-- comment example -->
     <sources language-level="11" source-folders="src" excluded="out">
         <complex>
             <item>12</item>
