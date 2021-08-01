@@ -15,7 +15,7 @@
   -->
 
 <xml>
-    <name>java-oop</name>
+    <name name="value">java-oop</name>
     <name></name>
     <name/>
     <sources>
@@ -23,4 +23,5 @@
         <source-folders>src</source-folders>
         <excluded>out</excluded>
     </sources>
+    <sources language-level="11" source-folders="src" excluded="out"/>
 </xml>
