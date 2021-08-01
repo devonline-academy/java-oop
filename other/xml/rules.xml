@@ -16,6 +16,8 @@
 
 <xml>
     <name>java-oop</name>
+    <name></name>
+    <name/>
     <sources>
         <language-level>11</language-level>
         <source-folders>src</source-folders>
