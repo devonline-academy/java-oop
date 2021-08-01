@@ -35,4 +35,16 @@
     <example>
         &lt;name name=&apos;value&apos;&gt;java-oop&lt;/name&gt;
     </example>
+    <example>
+        <![CDATA[
+            <sources>
+                <language-level>11</language-level>
+                <source-folders>src</source-folders>
+                <excluded>out</excluded>
+                <complex>
+                    <item>12</item>
+                </complex>
+            </sources>
+        ]]>
+    </example>
 </xml>
