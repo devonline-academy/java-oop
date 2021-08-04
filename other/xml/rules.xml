@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8" ?>
 <!--
   ~ Copyright 2019. http://devonline.academy
   ~
@@ -15,7 +14,13 @@
   ~ limitations under the License.
   -->
 
+<?processing-instruction-name language-level="11" source-folders="src" excluded="out" ?>
+<?processing-instruction-name language-level="11" source-folders="src" excluded="out" ?>
+<?processing-instruction-name language-level="11" source-folders="src" excluded="out" ?>
+<?processing-instruction-name language-level="11" source-folders="src" excluded="out" ?>
+
 <xml>
+    <?processing-instruction-name language-level="11" source-folders="src" excluded="out" ?>
     <name name='value'>java-oop</name>
     <name>&lt;&gt;&amp;&apos;&quot;</name>
     <name/>
@@ -24,6 +29,7 @@
         <source-folders>src</source-folders>
         <excluded>out</excluded>
         <complex>
+            <?processing-instruction-name language-level="11" source-folders="src" excluded="out" ?>
             <item>12</item>
         </complex>
     </sources>
