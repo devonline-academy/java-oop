@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copied from https://ru.wikipedia.org/wiki/DTD -->
+<!DOCTYPE people_list SYSTEM "people_list.dtd">
+<people_list>
+    <person>
+        <name>Fred Bloggs</name>
+        <birthdate>27/11/2008</birthdate>
+        <gender>Male</gender>
+        <socialsecuritynumber>1234567890</socialsecuritynumber>
+    </person>
+</people_list>
