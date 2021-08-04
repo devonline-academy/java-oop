@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copied from https://ru.wikipedia.org/wiki/XML_Schema_(W3C) -->
+<country xmlns="https://ru.wikipedia.org/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="">
+    <country_name>Test</country_name>
+    <population>156</population>
+</country>
