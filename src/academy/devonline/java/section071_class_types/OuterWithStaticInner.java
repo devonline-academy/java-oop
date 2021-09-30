@@ -20,11 +20,24 @@ package academy.devonline.java.section071_class_types;
  * @author devonline
  * @link http://devonline.academy/java
  */
-public interface Interface {
+public class OuterWithStaticInner {
+    private static int value1 = 1;
+    private int value2 = 2;
 
-    void method1();
+    private static void staticMethod() {
+    }
 
-    class Inner {
+    private void method() {
+    }
 
+    static class Inner {
+        void m() {
+            value1 = 90;
+            staticMethod();
+        }
+    }
+
+    public static void main(final String[] args) {
+        Inner o = new Inner();
     }
 }

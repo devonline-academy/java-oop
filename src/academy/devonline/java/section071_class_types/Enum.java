@@ -28,11 +28,7 @@ public enum Enum {
 
     VALUE_3;
 
-    private int value2 = 2;
+    static class Inner {
 
-    class Inner {
-        void m() {
-            value2 = 89;
-        }
     }
 }
