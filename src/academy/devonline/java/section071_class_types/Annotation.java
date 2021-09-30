@@ -21,8 +21,4 @@ package academy.devonline.java.section071_class_types;
  * @link http://devonline.academy/java
  */
 public @interface Annotation {
-
-    class Inner {
-
-    }
 }

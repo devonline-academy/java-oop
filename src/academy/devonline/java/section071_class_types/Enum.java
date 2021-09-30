@@ -26,9 +26,5 @@ public enum Enum {
 
     VALUE_2,
 
-    VALUE_3;
-
-    static class Inner {
-
-    }
+    VALUE_3
 }
