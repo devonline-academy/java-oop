@@ -20,7 +20,6 @@ package academy.devonline.java.section071_class_types;
  * @author devonline
  * @link http://devonline.academy/java
  */
-@FunctionalInterface
 public interface Interface {
 
     void method1();
