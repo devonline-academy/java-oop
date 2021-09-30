@@ -20,19 +20,31 @@ package academy.devonline.java.section071_class_types;
  * @author devonline
  * @link http://devonline.academy/java
  */
-public enum Enum {
+public class OuterWithNotStaticInner {
 
-    VALUE_1,
-
-    VALUE_2,
-
-    VALUE_3;
-
+    private static int value1 = 1;
     private int value2 = 2;
 
+    private static void staticMethod() {
+    }
+
+    private void method() {
+        Inner o = new Inner();
+    }
+
     class Inner {
+
         void m() {
-            value2 = 89;
+            value1 = 7;
+            value2 = 5;
+            staticMethod();
+            method();
         }
+    }
+
+    public static void main(final String[] args) {
+        OuterWithNotStaticInner outer = new OuterWithNotStaticInner();
+        Inner o = outer.new Inner();
+        o.m();
     }
 }
