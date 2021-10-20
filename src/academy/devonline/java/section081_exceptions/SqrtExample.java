@@ -27,10 +27,8 @@ public class SqrtExample {
         final double number = new Scanner(System.in).nextDouble();
         if (number >= 0) {
             System.out.println(Math.sqrt(number));
-            System.exit(0);
         } else {
-            System.err.println("Number must be positive!");
-            System.exit(1);
+            throw new IllegalArgumentException("Number must be positive!");
         }
     }
 }
