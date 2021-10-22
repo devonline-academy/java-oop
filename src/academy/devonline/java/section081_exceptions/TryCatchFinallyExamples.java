@@ -1,0 +1,84 @@
+/*
+ * Copyright 2019. http://devonline.academy
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package academy.devonline.java.section081_exceptions;
+
+/**
+ * @author devonline
+ * @link http://devonline.academy/java
+ */
+public class TryCatchFinallyExamples {
+    public static void main(final String[] args) {
+        // Case 1
+        try {
+            // code
+        } catch (ArithmeticException e) {
+            // code
+        } catch (RuntimeException e) {
+            // code
+        } catch (Exception e) {
+            // code
+        } finally {
+            // code
+        }
+
+        // Case 2
+        try {
+            // code
+        } catch (ArithmeticException e) {
+            // code
+        } catch (IllegalArgumentException e) {
+            // code
+        } catch (IllegalStateException e) {
+            // code
+        } finally {
+            // code
+        }
+
+        // Case 3
+        try {
+            // code
+        } catch (ArithmeticException | IllegalArgumentException | IllegalStateException e) {
+            // code
+        } finally {
+            // code
+        }
+
+        // Case 4
+        try {
+            // code
+        } catch (ArithmeticException e) {
+            // code
+        }
+
+        // Case 5
+        try {
+            // code
+        } catch (RuntimeException e) {
+            // code
+        } finally {
+            // code
+        }
+
+        // Case 6
+        try {
+            // code
+        } finally {
+            // code
+        }
+
+    }
+}
