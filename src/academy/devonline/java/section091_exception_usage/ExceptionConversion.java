@@ -43,7 +43,7 @@ public class ExceptionConversion {
                 configValue = provider.getConfigValue();
                 break;
             } catch (final CantReadConfigValueException exception) {
-                System.err.println("Can't read config value from provider: " + provider.getClass() + ": " + exception);
+                exception.printStackTrace();
             }
         }
         System.out.println(configValue);
@@ -60,8 +60,8 @@ public class ExceptionConversion {
             super(message);
         }
 
-        public CantReadConfigValueException() {
-            super();
+        public CantReadConfigValueException(final Exception exception) {
+            super(exception);
         }
     }
 
@@ -72,7 +72,7 @@ public class ExceptionConversion {
             try {
                 return Integer.parseInt(Files.readString(Paths.get(System.getProperty("user.home") + "/config-file.txt")));
             } catch (final IOException | NumberFormatException exception) {
-                throw new CantReadConfigValueException();
+                throw new CantReadConfigValueException(exception);
             }
         }
     }
@@ -92,7 +92,7 @@ public class ExceptionConversion {
                     }
                 }
             } catch (final SQLException exception) {
-                throw new CantReadConfigValueException();
+                throw new CantReadConfigValueException(exception);
             }
         }
     }
